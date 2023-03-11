@@ -1,6 +1,7 @@
-import logo from "../assets/images/logo.svg";
 import main from "../assets/images/main-alternative.svg";
 import Wrapper from "../assets/wrappers/LandingPage";
+import { Logo } from "../components";
+import { Link } from "react-router-dom";
 
 import React from "react";
 
@@ -8,7 +9,7 @@ const Landing = () => {
   return (
     <Wrapper>
       <nav>
-        <img src={logo} alt="jobify" className="logo" />
+        <Logo/>
       </nav>
       <div className="container page">
         {/*info*/}
@@ -27,7 +28,7 @@ const Landing = () => {
             and more recently with desktop publishing software like Aldus
             PageMaker including versions of Lorem Ipsum.
           </p>
-          <button className="btn btn-hero">Login/Register</button>
+          <Link to="/register" className="btn btn-hero">Login/Register</Link>
         </div>
         <img src={main} alt="job hunt" className="img main-img" />
       </div>
