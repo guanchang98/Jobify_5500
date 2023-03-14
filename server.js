@@ -8,6 +8,7 @@ import connectDB from "./db/connect.js";
 
 // routes
 import authRouter from "./routes/authRoutes.js";
+import jobsRouter from "./routes/jobsRoutes.js";
 
 // middleware
 import errorHandlerMiddleware from "./middleware/error-handler.js";
@@ -19,7 +20,8 @@ app.get("/", (req, res) => {
   res.send("Welcome!");
 });
 
-app.use('/api/v1/auth', authRouter);
+app.use("/api/v1/auth", authRouter);
+app.use("/api/v1/jobs", jobsRouter);
 
 app.use(notFoundMiddleware);
 
