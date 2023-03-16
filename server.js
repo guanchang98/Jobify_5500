@@ -18,11 +18,11 @@ import notFoundMiddleware from "./middleware/not-found.js";
 app.use(express.json());
 
 app.get("/", (req, res) => {
-  res.send("Welcome!");
+  res.json({ msg: "Welcome!" });
 });
 
 app.get("/api/v1", (req, res) => {
-  res.send('API');
+  res.json({ msg: "API" });
 });
 
 app.use("/api/v1/auth", authRouter);
@@ -32,7 +32,7 @@ app.use(notFoundMiddleware);
 
 app.use(errorHandlerMiddleware);
 
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 5040;
 
 const start = async () => {
   try {
