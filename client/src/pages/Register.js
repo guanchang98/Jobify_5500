@@ -12,10 +12,10 @@ const initialState = {
 };
 
 const Register = () => {
-  const  navigate = useNavigate();
+  const navigate = useNavigate();
   const [values, setValues] = useState(initialState);
 
-  const { user, isLoading, showAlert, displayAlert,  registerUser, loginUser } =
+  const { user, isLoading, showAlert, displayAlert, registerUser, loginUser } =
     useAppContext();
 
   const handleChange = (e) => {
@@ -46,7 +46,7 @@ const Register = () => {
     if (user) {
       setTimeout(() => {
         navigate("/");
-      }, 3000);
+      }, 1500);
     }
   }, [user, navigate]);
 
